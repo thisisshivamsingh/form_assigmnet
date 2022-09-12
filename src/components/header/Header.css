@@ -1,9 +1,7 @@
 ul {
   display: flex;
 }
-.logout {
-  margin-left: auto;
-}
+
 li {
   padding: 1rem;
 }

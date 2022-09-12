@@ -3,7 +3,7 @@ import "./App.css";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Login from "./components/login/Login";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Profile from "./components/Profile";
 
 function App() {

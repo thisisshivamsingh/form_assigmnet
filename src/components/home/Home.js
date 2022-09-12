@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import "./Home.css";
 
 const Home = () => {
   const userInfo = useSelector((state) => state.data);
@@ -11,13 +12,15 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      {userInfoArr.map((elem, id) => (
-        <ul key={id}>
-          <li>
-            <h3>{elem}</h3>
-          </li>
+      <div className="div-center">
+        <ul>
+          {userInfoArr.map((elem, id) => (
+            <li key={id}>
+              <h3>{elem}</h3>
+            </li>
+          ))}
         </ul>
-      ))}
+      </div>
     </div>
   );
 };
