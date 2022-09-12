@@ -1,9 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Login from "./components/Login";
+import Header from "./components/header/Header";
+import Login from "./components/login/Login";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -19,7 +20,24 @@ function App() {
               </>
             }
           />
-          <Route path="/home" element={<Home />} />
+          <Route
+            path="/home"
+            element={
+              <>
+                <Header />
+                <Home />
+              </>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <>
+                <Header />
+                <Profile />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

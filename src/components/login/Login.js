@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { loginDetails } from "../redux/actions";
+import { loginDetails } from "../../redux/actions";
+import "./Login.css";
 
 const Login = () => {
   const [form, setForm] = useState({
@@ -28,44 +29,48 @@ const Login = () => {
 
   const { name, email, number, address } = form;
   return (
-    <div>
+    <div className="login-form">
       <h3>Login</h3>
       <form onSubmit={submitLogin}>
-        <h5>Name: </h5>
         <input
           type="text"
           value={name}
           name="name"
           onChange={inputHandler}
+          placeholder="Name"
           required
         />
-        <h5>Email: </h5>
+        <br />
         <input
           type="text"
           value={email}
           name="email"
           onChange={inputHandler}
+          placeholder="Email"
           required
         />
-        <h5>Number: </h5>
+        <br />
         <input
           type="number"
           value={number}
           name="number"
           onChange={inputHandler}
+          placeholder="Phone Number"
           required
         />
-        <h5>Address: </h5>
-        <textarea
-          placeholder="Write your address"
+        <br />
+        <input
           type="text"
           name="address"
           value={address}
           onChange={inputHandler}
+          placeholder="Write Your Address"
           required
         />
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className="login">
+          Submit
+        </button>
       </form>
     </div>
   );
